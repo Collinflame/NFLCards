@@ -2,24 +2,34 @@ extends layout
 block content
   h1 NFL Cards
   div.qb
-    div.top
-      h3 Josh Allen
-      h3 HP 85
-      div.type
-        img(src=`/images/quarterback.png`)
-    img(src=`/images/JoshAllen.png`)
-    div.attacks
-      div.first
+    div.section
+      div.details
+        h3 Josh Allen
+        div.hp
+          h3 HP 85
         div.type
           img(src=`/images/quarterback.png`)
-        h3 Quarterback Rush
-        h3 40
-      div.second
+    div.section
+      div.player
+        img(src=`/images/JoshAllen.png`)
+    div.section
+      div.attacks
+        div.attack
+          div.type
+            img(src=`/images/quarterback.png`)
+          h3 Quarterback Rush
+          h3 40
+        div.attack
+          div.type
+            img(src=`/images/quarterback.png`)
+          div.type
+            img(src=`/images/quarterback.png`)
+          h3 Hail Mary
+          h3 60
+      div.abilities
         div.type
-          img(src=`/images/quarterback.png`)
-          img(src=`/images/quarterback.png`)
-        h3 Hail Mary
-        h3 60
-    div.weakness
-      h4 Weakness
-      img(src=`/images/DLinemen.png`)
+          h4 Weakness
+          img(src=`/images/DLinemen.png`)
+        div.type
+          h4 Resistance
+          img(src=`/images/Safety.png`)
