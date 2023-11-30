@@ -1,35 +1,32 @@
 extends layout
 block content
   h1 NFL Cards
-  div.qb
+  div.position=nfl.qb
     div.section
       div.details
-        h3 Josh Allen
-        div.hp
-          h3 HP 85
-        div.type
-          img(src=`/images/quarterback.png`)
-    div.section
-      div.player
-        img(src=`/images/JoshAllen.png`)
-    div.section
+        div.name=nfl.name
+        div.hp=nfl.hp
+        img.type(src=nfl.type)
+    div.section2
+      img.player(src=nfl.image class='border-player')
+    div.section3
       div.attacks
         div.attack
-          div.type
-            img(src=`/images/quarterback.png`)
-          h3 Quarterback Rush
-          h3 40
+          div.attackOneCost
+            -for(let i = 0; i<nfl.attackOneCost; i++)
+              span &#X2b50
+          div.attackOne=nfl.attackOne
+          div.attackOneHP=nfl.attackOneHP
         div.attack
-          div.type
-            img(src=`/images/quarterback.png`)
-          div.type
-            img(src=`/images/quarterback.png`)
-          h3 Hail Mary
-          h3 60
+          div.attackTwoCost
+            -for(let i = 0; i<nfl.attackTwoCost; i++)
+              span &#X2b50
+          div.attackTwo=nfl.attackTwo
+          div.attackTwoHP=nfl.attackTwoHP
       div.abilities
-        div.type
+        div.weakness
           h4 Weakness
-          img(src=`/images/DLinemen.png`)
-        div.type
+          img.weaknessType(src=nfl.weaknessType)
+        div.resistance
           h4 Resistance
-          img(src=`/images/Safety.png`)
+          img.resistanceType(src=nfl.resistanceType)

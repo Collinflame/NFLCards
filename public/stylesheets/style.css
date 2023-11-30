@@ -7,19 +7,35 @@ a {
   color: #00B7FF;
 }
 .type {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   display: flex;
   flex-direction: column;
 }
-.player {
+.resistance {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+}.weakness {
+   width: 50px;
+   height: 50px;
+   display: flex;
+   flex-direction: column;
+ }
+
+.section2 {
   display: flex;
   justify-content: space-evenly;
 }
-.qb {
-  height: 680px;
+.border-player {
+  border: 5px solid #252323;
+  border-radius: 5px;
+}
+.position {
+  height: 600px;
   width: 400px;
-  background-color: #111457;
+  background-color: #5376e8;
   border: 5px solid #252323;
   border-radius: 5px;
   margin: 3px;
@@ -43,4 +59,22 @@ a {
 }
 .section {
   margin: 5px;
+}
+.name {
+  font-size: 25px;
+}
+.hp {
+  font-size: 25px;
+}
+.attackOne {
+  font-size: 25px;
+}
+.attackTwo {
+  font-size: 25px;
+}
+.attackOneHP {
+  font-size: 25px;
+}
+.attackTwoHP {
+  font-size: 25px;
 }
