@@ -1,7 +1,7 @@
 module.exports.viewAll = function(req, res, next) {
-    const nfl = {
+    const nfls =[ {
         id: 1,
-        position: 'qb',
+        team: 'Bills',
         name: 'Josh Allen',
         hp: 85,
         type: '/images/Quarterback.png',
@@ -14,6 +14,22 @@ module.exports.viewAll = function(req, res, next) {
         attackTwoHP: 60,
         weaknessType: '/images/DLinemen.png',
         resistanceType: '/images/Safety.png',
-    };
-    res.render('index', {nfl});
+    },
+    {
+        id: 2,
+        team: 'Chiefs',
+        name: 'Patrick Mahomes',
+        hp: 80,
+        type: '/images/Quarterback.png',
+        image: 'https://i2-prod.dailystar.co.uk/incoming/article21123568.ece/ALTERNATES/s1200c/1_GettyImages-1194337140.jpg',
+        attackOne: 'Bullet Throw',
+        attackOneCost: 1,
+        attackOneHP: 30,
+        attackTwo: 'Hail Mary',
+        attackTwoCost: 2,
+        attackTwoHP: 60,
+        weaknessType: '/images/DLinemen.png',
+        resistanceType: '/images/Safety.png',
+    }];
+    res.render('index', {nfls});
 }

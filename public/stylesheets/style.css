@@ -37,10 +37,9 @@ a {
   height: 300px;
   width: 300px;
 }
-.position {
-  height: 600px;
+.team {
+  height: 630px;
   width: 400px;
-  background-color: #5376e8;
   border: 5px solid #252323;
   border-radius: 5px;
   margin: 3px;
@@ -83,4 +82,115 @@ a {
 }
 .attackTwoHP {
   font-size: 25px;
+}
+.attackOneCost {
+  display: flex;
+  flex-direction: row;
+}
+.attackTwoCost {
+  display: flex;
+  flex-direction: row;
+}
+.container {
+  padding: 48px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.Bills {
+  background-color: #00338D;
+}
+.Dolphins {
+  background-color: #008E97;
+}
+.Patriots {
+  background-color: #002244;
+}
+.Jets {
+  background-color: #125740;
+}
+.Ravens {
+  background-color: #241773;
+}
+.Bengals {
+  background-color: #FB4F14;
+}
+.Browns {
+  background-color: #FF3C00;
+}
+.Steelers {
+  background-color: #A5ACAF;
+}
+.Chiefs {
+  background-color: #E31837;
+}
+.Broncos {
+  background-color: #FB4F14;
+}
+.Raiders {
+  background-color: #A5ACAF;
+}
+.Chargers {
+  background-color: #0080C6;
+}
+.Jaguars {
+  background-color: #9F792C;
+}
+.Colts {
+  background-color: #002C5F;
+}
+.Texans {
+  background-color: #03202F;
+}
+.Titans {
+  background-color: #0C2340;
+}
+.Bears {
+  background-color: #C83803;
+}
+.Lions {
+  background-color: #0076B6;
+}
+.Packers {
+  background-color: #203731;
+}
+.Vikings {
+  background-color: #4F2683;
+}
+.Cowboys {
+  background-color: #041E42;
+}
+.Giants {
+  background-color: #0B2265;
+}
+.Eagles {
+  background-color: #004C54;
+}
+.Commanders {
+  background-color: #5A1414;
+}
+.Falcons {
+  background-color: #A71930;
+}
+.Panthers {
+  background-color: #0085CA;
+}
+.Saints {
+  background-color: #D3BC8D;
+}
+.Buccaneers {
+  background-color: #D50A0A;
+}
+.Cardinals {
+  background-color: #97233F;
+}
+.Rams {
+  background-color: #003594;
+}
+.Niners {
+  background-color: #AA0000;
+}
+.Seahawks {
+  background-color: #002244;
 }

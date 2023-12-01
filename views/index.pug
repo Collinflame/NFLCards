@@ -1,32 +1,36 @@
 extends layout
 block content
   h1 NFL Cards
-  div.position=nfl.qb
-    div.section
-      div.details
-        div.name=nfl.name
-        div.hp=nfl.hp
-        img.type(src=nfl.type)
-    div.section2
-      img.player(src=nfl.image class='border-player')
-    div.section3
-      div.attacks
-        div.attack
-          div.attackOneCost
-            -for(let i = 0; i<nfl.attackOneCost; i++)
-              span &#X2b50
-          div.attackOne=nfl.attackOne
-          div.attackOneHP=nfl.attackOneHP
-        div.attack
-          div.attackTwoCost
-            -for(let i = 0; i<nfl.attackTwoCost; i++)
-              div &#X2b50
-          div.attackTwo=nfl.attackTwo
-          div.attackTwoHP=nfl.attackTwoHP
-      div.abilities
-        div.weakness
-          h4 Weakness
-          img.weaknessType(src=nfl.weaknessType)
-        div.resistance
-          h4 Resistance
-          img.resistanceType(src=nfl.resistanceType)
+  div.container
+    each nfl in nfls
+      div.team(class=nfl.team)
+        div.section
+          div.details
+            div.name=nfl.name
+            div.hp=nfl.hp
+            img.type(src=nfl.type)
+        div.section2
+          img.player(src=nfl.image class='border-player')
+        div.section3
+          div.attacks
+            div.attack
+              div.attackOneCost
+                -for(let i = 0; i<nfl.attackOneCost; i++)
+                  div.type
+                    img(src=nfl.type)
+              div.attackOne=nfl.attackOne
+              div.attackOneHP=nfl.attackOneHP
+            div.attack
+              div.attackTwoCost
+                -for(let i = 0; i<nfl.attackTwoCost; i++)
+                  div.type
+                    img(src=nfl.type)
+              div.attackTwo=nfl.attackTwo
+              div.attackTwoHP=nfl.attackTwoHP
+          div.abilities
+            div.weakness
+              h4 Weakness
+              img.weaknessType(src=nfl.weaknessType)
+            div.resistance
+              h4 Resistance
+              img.resistanceType(src=nfl.resistanceType)
