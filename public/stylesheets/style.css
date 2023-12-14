@@ -7,8 +7,8 @@ a {
   color: #00B7FF;
 }
 .type {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   display: flex;
   flex-direction: column;
 }
@@ -72,16 +72,16 @@ a {
   font-size: 25px;
 }
 .attackOne {
-  font-size: 25px;
+  font-size: 20px;
 }
 .attackTwo {
-  font-size: 25px;
+  font-size: 20px;
 }
 .attackOneHP {
-  font-size: 25px;
+  font-size: 20px;
 }
 .attackTwoHP {
-  font-size: 25px;
+  font-size: 20px;
 }
 .attackOneCost {
   display: flex;
@@ -96,6 +96,39 @@ a {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+}
+.edit {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  top: 29px;
+}
+.color {
+  color: black;
+}
+.button {
+  display: block;
+  border-radius: 6px;
+  padding: 8px 16px;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  font-size: 14px;
+  line-height: 1.25rem;
+}
+.button.save {
+  background: #155E75;
+  color: white;
+  border: 1px solid #164E63;
+}
+.add-button-row{
+  display: flex;
+  justify-content: flex-start;
+}
+.main-header{
+  background: #242323;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .Bills {

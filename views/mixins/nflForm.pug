@@ -1,0 +1,67 @@
+mixin nflForm(nfl, actionURL, mode, title)
+
+    div.form-panel
+        div.header= title
+            form(action=actionURL method='post')
+                div.form-input
+                    label(for='team') Team:
+                    select(name='team' id='team' autocomplete='off')
+                        each team in teams
+                            option(value=team selected=(team ===nfl.team)) #{team}
+                div.form-input
+                    label(for='name') Name:
+                    input(type='text' id='name' name="name" value=nfl.name)
+                div.form-input
+                    label(for='hp') HP:
+                    select(id='hp' name='hp' autocomplete='off')
+                        -for(let i=70; i<=100; i++)
+                            option(value=i selected=(hp === nfl.hp)) #{i}
+                div.form-input
+                    label(for='type') Type:
+                    select(name='type' id='type' autocomplete='off')
+                        each type in types
+                            option(value=type selected=(type === nfl.type)) #{type}
+                div.form-input
+                    label(for='image') Image URL:
+                    input(type='text' id='image' name='image' value=nfl.image)
+                div.form-input
+                    label(for='attackOne') Attack One:
+                    input(type='text' id='attackOne' name="attackOne" value=nfl.attackOne)
+                div.form-input
+                    label(for='attackOneCost') Attack One Cost:
+                    select(id='attackOneCost' name='attackOneCost' autocomplete='off')
+                        -for (let x = 1; x <= 3; x++)
+                            option(value=x selected=(attackOneCost === nfl.attackOneCost)) #{x}
+                div.form-input
+                    label(for='attackOneHP') Attack One HP:
+                    select(id='attackOneHP' name='attackOneHP' autocomplete='off')
+                        -for (let y = 30; y <= 80; y++)
+                            option(value=y selected=(attackOneHP === nfl.attackOneHP)) #{y}
+                div.form-input
+                    label(for='attackTwo') Attack Two:
+                    input(type='text' id='attackTwo' name="attackTwo" value=nfl.attackTwo)
+                div.form-input
+                    label(for='attackTwoCost') Attack Two Cost:
+                    select(id='attackTwoCost' name='attackTwoCost' autocomplete='off')
+                        -for (let z = 1; z <= 3; z++)
+                            option(value=z selected=(attackOneCost === nfl.attackOneCost)) #{z}
+                div.form-input
+                    label(for='attackTwoHP') Attack Two HP:
+                    select(id='attackTwoHP' name='attackTwoHP' autocomplete='off')
+                        -for (let n = 30; n <= 80; n++)
+                            option(value=n selected=(attackOneHP === nfl.attackOneHP)) #{n}
+                div.form-input
+                    label(for='weaknessType') Weakness Type:
+                    select(name='weaknessType' id='weaknessType' autocomplete='off')
+                        each weaknessType in weaknessTypes
+                            option(value=weaknessType selected=(weaknessType === nfl.weaknessType)) #{weaknessType}
+                div.form-input
+                    label(for='resistanceType') Resistance Type:
+                    select(name='resistanceType' id='resistanceType' autocomplete='off')
+                        each resistanceType in resistanceTypes
+                            option(value=resistanceType selected=(resistanceType === nfl.resistanceType)) #{resistanceType}
+                div.button-row
+                    a.button.cancel(href='/') Cancel
+                    if (mode==='edit')
+                        a.button.delete(href=`/delete/${nfl.id}`) Delete
+                    button.button.save(type='submit') Submit

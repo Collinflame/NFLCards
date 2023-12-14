@@ -1,0 +1,36 @@
+mixin nflCard(nfl)
+
+    div.team(class=nfl.team)
+        div.section
+            div.details
+                div.name=nfl.name
+                div.hp=nfl.hp
+                img.type(src=nfl.type)
+        div.section2
+            img.player(src=nfl.image class='border-player')
+        div.section3
+            div.attacks
+                div.attack
+                    div.attackOneCost
+                        -for (let i = 0; i < nfl.attackOneCost; i++)
+                            div.type
+                                img(src=nfl.type)
+                    div.attackOne=nfl.attackOne
+                    div.attackOneHP=nfl.attackOneHP
+                div.attack
+                    div.attackTwoCost
+                        -for (let i = 0; i < nfl.attackTwoCost; i++)
+                            div.type
+                                img(src=nfl.type)
+                    div.attackTwo=nfl.attackTwo
+                    div.attackTwoHP=nfl.attackTwoHP
+            div.abilities
+                div.weakness
+                    h4 Weakness
+                    img.weaknessType(src=nfl.weaknessType)
+                div.resistance
+                    h4 Resistance
+                    img.resistanceType(src=nfl.resistanceType)
+        div.section4
+            div.edit
+                a(href=`/edit/${nfl.id}`) Edit
